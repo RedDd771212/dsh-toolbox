@@ -1,0 +1,21 @@
+# 依赖与构建产物（本插件无运行时依赖，留着防御）
+node_modules/
+dist/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# 日志与临时文件
+*.log
+*.tmp
+npm-debug.log*
+pnpm-debug.log*
+
+# 本机配置快照，别误提交
+toolbox.json
+fsmod-workbench.json
+*.local.json

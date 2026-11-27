@@ -1,0 +1,6 @@
+# dsh-toolbox 的挂载补丁。
+# 这里只负责把插件「插进」宿主；所有可配置项都在面板的「设置」里改，
+# 不写进 cordis.patch.yml，避免改了 yml 还要重启宿主。
+- insert:
+    - id: dsh-toolbox
+      name: dsh-toolbox

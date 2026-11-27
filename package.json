@@ -1,0 +1,41 @@
+{
+  "name": "dsh-toolbox",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "description": "工具箱：DeepSeek Harness 面板插件，把自己的工具（exe 或网页）按分类登记成卡片，按扩展名路由、一键启动与关闭，项目目录树随手点开",
+  "main": "lib/index.js",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "icon.svg",
+    "locale/en.json",
+    "locale/zh.json",
+    "lib/client.js",
+    "lib/index.js",
+    "lib/define-tool.js",
+    "cordis.patch.yml",
+    "README.md",
+    "docs/DETAIL.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
